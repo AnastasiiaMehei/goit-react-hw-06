@@ -21,10 +21,12 @@ const slice = createSlice({
         };
       },
       deleteContact: (state, action) => {
-        const index = state.items.findIndex(
+        const index = state.findIndex(
           (contact) => contact.id === action.payload
         );
-        state.items.splice(index, 1);
+        if (index !== -1) {
+          state.splice(index, 1);
+        }
       },
     },
   },
