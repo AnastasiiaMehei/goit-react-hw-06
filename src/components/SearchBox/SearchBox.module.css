@@ -2,8 +2,12 @@
   margin-bottom: 25px;
 }
 .input {
-  width: 100%;
+  width: 500px;
+  border: 1px solid;
 }
 .input:hover {
+  border: 2px solid salmon;
+}
+.input:focus {
   border: 2px solid salmon;
 }
