@@ -15,16 +15,16 @@ const slice = createSlice({
       prepare(value) {
         return {
           payload: {
-            value,
+            ...value,
             id: crypto.randomUUID(),
           },
         };
       },
       deleteContact: (state, action) => {
-        const index = state.findIndex(
+        const index = state.items.findIndex(
           (contact) => contact.id === action.payload
         );
-        state.splice(index, 1);
+        state.items.splice(index, 1);
       },
     },
   },

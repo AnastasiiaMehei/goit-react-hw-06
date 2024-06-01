@@ -5,7 +5,7 @@ import { selectContact } from "../../redux/contactsSlice";
 
 export default function ContactList() {
   const contacts = useSelector(selectContact);
-
+  console.log(contacts);
   return (
     <ul className={css.ul}>
       {contacts.map((contact) => {
