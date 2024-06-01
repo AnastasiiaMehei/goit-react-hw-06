@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "./SearchBox.module.css";
 import { filterContact, getStatusFilter } from "../../redux/filtersSlice";
-export default function SearchBox({ value, onFilter }) {
+export default function SearchBox({ value }) {
   const dispatch = useDispatch();
   const filter = useSelector(getStatusFilter);
   const handleFilter = (filter) => dispatch(filterContact(filter));
@@ -11,10 +11,9 @@ export default function SearchBox({ value, onFilter }) {
       <p>Find contacts by name</p>
       <input
         className={css.input}
-        onClick={() => handleFilter(filter)}
+        onChange={() => handleFilter(filter)}
         type="text"
         value={value}
-        onChange={(e) => onFilter(e.target.value)}
       />
     </div>
   );

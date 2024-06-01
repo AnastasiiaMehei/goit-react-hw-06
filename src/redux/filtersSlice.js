@@ -12,4 +12,4 @@ const slice = createSlice({
 export const { filterContact } = slice.actions;
 export default slice.reducer;
 export const filterReducer = slice.reducer;
-export const getStatusFilter = (state) => state.filters.items;
+export const getStatusFilter = (state) => state.filters?.name || "";
