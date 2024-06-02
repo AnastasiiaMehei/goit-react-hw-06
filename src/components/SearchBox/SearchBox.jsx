@@ -8,7 +8,7 @@ export default function SearchBox() {
 
   return (
     <div className={css.div}>
-      <p>Find contacts by name</p>
+      <p className={css.paragraph}>Find contacts by name</p>
       <input
         className={css.input}
         onChange={handleFilter}

@@ -1,24 +1,21 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.itemContainer {
-  display: flex;
-  flex-direction: column;
-  width: calc(25% - 10px);
-  margin-bottom: 20px;
-}
-
 .ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .li {
-  padding: 10px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: zoom-in;
 }
